@@ -16,9 +16,16 @@ const displayDate = () => {
 
 // Write a JavaScript program to convert a number to a string.
 
+// const numToString = num => String(num)
+
+const numToString = num => num.toString()
+  
 
 
 // Write a JavaScript program to convert a string to the number.
+const stringToNum = str => Number(str)
+
+ 
 
 
 
@@ -29,22 +36,61 @@ const displayDate = () => {
   // * Number
   // * NaN
   // * String
+
+  // const dataType = data => Array.isArray(data) ? 'array' : data;
+
+  // const typeOf = data => Array.isArray(data) ? 'array' : typeof data;
   
+
+  // document.getElementById("textArea").value
+
+
+  // data === 'undefined'
+  // data === 'null'
+  // data === 'true'
+
+
+    const dataType = () => {
+    const dataInput = document.getElementById('textArea').value 
+ 
+    if (dataInput === 'true' || dataInput === 'false') {
+      return document.getElementById("whatData").innerHTML = 'Boolean'
+    }
+    if (dataInput === 'Null') {
+      return document.getElementById("whatData").innerHTML = 'Null'
+    }
+    if (dataInput === 'Undefined') {
+      return document.getElementById("whatData").innerHTML = 'Undefined'
+    }
+    if (isNaN(dataInput)) {
+      return document.getElementById("whatData").innerHTML = 'NaN'
+    } else {
+      return document.getElementById("whatData").innerHTML = 'Number'
+    }
+}
+
+  
+
 
   
 // Write a JavaScript program that adds 2 numbers together.
+const add = (num1, num2) => num1 + num2;
 
 
 
 // Write a JavaScript program that runs only when 2 things are true.
+const bothTrue = (a, b) => a && b;
+
+
 
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
-
+const oneTrue = (a, b) => a || b; 
 
 
 // Write a JavaScript program that runs when both things are not true.  
+const bothNotTrue = (a, b) => !a && !b;
 
 // ***************************
 //         PART TWO
@@ -58,6 +104,15 @@ const displayDate = () => {
 // 6. go to `index.html` 
 // 7. create inputs, buttons and event listeners that render the code blocks you built above to the DOM.
 
+const addForm = document.getElementById('add');
+addForm.addEventListener("submit", e => {
+  e.preventDefault()
+
+  const n1 = document.getElementById("number1").value;
+  const n2 = document.getElementById("number2").value;
+  const sum = add(stringToNum(n1), stringToNum(n2))
+  document.getElementById("sum").innerHTML = `The Sum of ${n1} + ${n2} is ${sum}`;
+})
 
 
 

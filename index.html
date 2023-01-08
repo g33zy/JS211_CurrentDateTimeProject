@@ -2,8 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <script src="main.js"></script>
+    <title>Current Date time</title>
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -11,5 +10,33 @@
     <div id="display-element"></div>
     <button onclick="displayDate()">Click Me</button>
     <hr/>
+
+    <div>
+      <p>Choose two numbers to add together:</p>
+      <form id="add" method="post">
+        <input placeholder="first number" id="number1" type="number">
+        <input placeholder="second number" id="number2" type="number">
+        <button type="submit">Add</button>
+
+        <div id="sum"></div>
+
+        <!-- <textarea id="textArea" cols="30" rows="3"></textarea> -->
+        <p>Data Type</p>
+          <input placeholder="types of data" id="textArea" type="text">
+        <button onclick="dataType()" class="dataType" type="submit">Data Type</button>
+
+        <!-- <p>Data Type</p> -->
+      <!-- <input id="dataData" type="text"> -->
+      <!-- <button onclick="dataType()" type="submit">Find</button> -->
+      <div id="whatData"></div>
+      
+
+      </form>
+
+
+      
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
