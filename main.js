@@ -18,12 +18,24 @@ const displayDate = () => {
 
 // const numToString = num => String(num)
 
-const numToString = num => num.toString()
+const numToString = () => {
+  const numInput = document.getElementById('numString').value
+  let s = numInput.toString() 
+  document.getElementById('output').innerHTML = s + ' is now a ' + typeof s
+}
   
 
 
 // Write a JavaScript program to convert a string to the number.
-const stringToNum = str => Number(str)
+// const stringToNum = str => Number(str)
+
+const stringToNum = () => { 
+  const strInput = document.getElementById('stringNum').value
+  
+  let n = parseInt(strInput)
+  document.getElementById('output2').innerHTML = n + ' is now a ' + typeof n
+
+}
 
  
 
@@ -62,12 +74,19 @@ const stringToNum = str => Number(str)
     if (dataInput === 'Undefined') {
       return document.getElementById("whatData").innerHTML = 'Undefined'
     }
+    // if (typeof stringToNum(dataInput) === 'number') {
+    //   return document.getElementById("whatData").innerHTML = 'Number'
+    // }
     if (isNaN(dataInput)) {
       return document.getElementById("whatData").innerHTML = 'NaN'
     } else {
-      return document.getElementById("whatData").innerHTML = 'Number'
-    }
+      return document.getElementById("whatData").innerHTML = 'String'
+     }
+    //  console.log(dataType())
+
+
 }
+
 
   
 
