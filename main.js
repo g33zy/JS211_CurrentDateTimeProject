@@ -68,21 +68,21 @@ const stringToNum = str => Number(str)
     const dataInput = document.getElementById('textArea').value 
  
     if (dataInput === 'true' || dataInput === 'false') {
-      return document.getElementById("whatData").innerHTML = 'Boolean'
+      return document.getElementById("hatData").innerHTML = 'Boolean'
     }
     if (dataInput === 'Null') {
-      return document.getElementById("whatData").innerHTML = 'Null'
+      return document.getElementById("hatData").innerHTML = 'Null'
     }
     if (dataInput === 'Undefined') {
-      return document.getElementById("whatData").innerHTML = 'Undefined'
+      return document.getElementById("hatData").innerHTML = 'Undefined'
     }
     // if (typeof stringToNum(dataInput) === 'number') {
     //   return document.getElementById("whatData").innerHTML = 'Number'
     // }
     if (isNaN(parseInt(dataInput))) {
-      return document.getElementById("whatData").innerHTML = 'String'
+      return document.getElementById("hatData").innerHTML = 'String'
     } else {
-      return document.getElementById("whatData").innerHTML = 'Number'
+      return document.getElementById("hatData").innerHTML = 'Number'
      }
     //  console.log(dataType())
 
@@ -112,6 +112,21 @@ const oneTrue = (a, b) => a || b;
 
 // Write a JavaScript program that runs when both things are not true.  
 const bothNotTrue = (a, b) => !a && !b;
+
+// const notTrueForm = document.getElementById('not-true');
+// notTrueForm.addEventListener("submit", e => {
+//   e.preventDefault()
+
+//   const value1 = document.getElementById("value1").value;
+//   const value2 = document.getElementById("value2").value;
+//   const notTrue = bothNotTrue((value1), (value2));
+//   document.getElementById("notTrueResults").innerHTML = 'Undefined';
+//   document.getElementById("notTrueResults2").innerHTML = 'Null';
+// })
+
+
+// test !true && !false
+
 
 // ***************************
 //         PART TWO
