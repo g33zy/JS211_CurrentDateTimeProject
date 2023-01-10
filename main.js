@@ -16,26 +16,28 @@ const displayDate = () => {
 
 // Write a JavaScript program to convert a number to a string.
 
-// const numToString = num => String(num)
+const numToString = num => String(num)
 
-const numToString = () => {
-  const numInput = document.getElementById('numString').value
-  let s = numInput.toString() 
-  document.getElementById('output').innerHTML = s + ' is now a ' + typeof s
-}
+
+
+// const numToString = () => {
+//   const numInput = document.getElementById('numString').value
+//   let s = numInput.toString() 
+//   document.getElementById('output').innerHTML = s + ' is now a ' + typeof s
+// }
   
 
 
 // Write a JavaScript program to convert a string to the number.
-// const stringToNum = str => Number(str)
+const stringToNum = str => Number(str)
 
-const stringToNum = () => { 
-  const strInput = document.getElementById('stringNum').value
+// const stringToNum = () => { 
+//   const strInput = document.getElementById('stringNum').value
   
-  let n = parseInt(strInput)
-  document.getElementById('output2').innerHTML = n + ' is now a ' + typeof n
+//   let number23 = parseInt(strInput)
+//   document.getElementById('output2').innerHTML = number23 + ' is now a ' + typeof number23
 
-}
+// }
 
  
 
@@ -54,7 +56,7 @@ const stringToNum = () => {
   // const typeOf = data => Array.isArray(data) ? 'array' : typeof data;
   
 
-  // document.getElementById("textArea").value
+  
 
 
   // data === 'undefined'
@@ -77,10 +79,10 @@ const stringToNum = () => {
     // if (typeof stringToNum(dataInput) === 'number') {
     //   return document.getElementById("whatData").innerHTML = 'Number'
     // }
-    if (isNaN(dataInput)) {
-      return document.getElementById("whatData").innerHTML = 'NaN'
-    } else {
+    if (isNaN(parseInt(dataInput))) {
       return document.getElementById("whatData").innerHTML = 'String'
+    } else {
+      return document.getElementById("whatData").innerHTML = 'Number'
      }
     //  console.log(dataType())
 
